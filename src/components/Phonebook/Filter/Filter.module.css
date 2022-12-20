@@ -1,0 +1,20 @@
+.filter_block {
+  margin-bottom: 24px;
+}
+.filter_block label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.filter_block input {
+  width: 436px;
+}
+label {
+  position: relative;
+}
+label img {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,35 @@
+@import-normalize; /* bring in normalize.css styles */
+
+body {
+  background-color: rgba(75, 75, 75, 0.164);
+  padding: 20px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input {
+  margin-left: 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 30px;
+}
