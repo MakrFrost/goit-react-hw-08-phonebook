@@ -1,0 +1,43 @@
+/*! Container & Homepage*/
+.active {
+  font-weight: bold;
+  color: red;
+}
+.main-container {
+  height: 600px;
+  padding: 30px;
+
+  background-color: rgba(177, 177, 177, 0.589);
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.appbar-container {
+  position: relative;
+  display: flex;
+  margin-right: auto;
+  width: 100%;
+
+  margin-bottom: 30px;
+}
+.appbar-container::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+.register {
+  margin-left: auto;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 140px;
+}
