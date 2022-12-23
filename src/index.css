@@ -1,9 +1,11 @@
 @import-normalize; /* bring in normalize.css styles */
 
 /*! Container & Homepage*/
-@import url('./styles/main-containers.css');
+@import url('./styles/main-containers.module.css');
+@import url('./styles/navigation.module.css');
 
 body {
+  /* cursor: default; */
   background-image: url('./img/bcg.png');
   background-color: rgba(75, 75, 75, 0.164);
   padding: 40px;
