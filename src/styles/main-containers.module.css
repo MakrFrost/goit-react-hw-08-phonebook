@@ -1,4 +1,13 @@
 /*! Container & Homepage*/
+.active {
+  transform: scale(1.1);
+  border-radius: 10px;
+  background-color: #ffffffa9;
+
+  box-shadow: rgba(0, 0, 0, 0.788) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
 /* Main containers */
 .main-container {
   min-height: 600px;
@@ -31,11 +40,15 @@
 .appbar-container a {
   display: flex;
   align-items: center;
+  padding: 8px;
+  border-radius: 10px;
+  transition: all 350ms ease-out;
 }
 .appbar-container a:hover {
   color: #00000070;
 }
 .appbar-container a:active {
+  transition: color 100ms ease-in-out;
   color: #00000030;
 }
 .appbar-container a:visited {
@@ -80,12 +93,17 @@
   align-items: center;
   padding: 10px;
   margin-top: 10px;
+  border-radius: 30px;
+  background-color: #00000025;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 3px 3px;
+  transition: color 250ms ease-in, background-color 250ms ease,
+    transform 250ms ease-in-out, box-shadow 300ms ease;
 }
 .homepage-list li:hover {
   cursor: default;
   background-color: #00000010;
   border-radius: 30px;
-  transform: scale(1.05);
+  transform: scale(1.04);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   background-color: #ffffff50;
 }
@@ -93,6 +111,7 @@
   width: 30px;
   height: 30px;
   margin-right: 20px;
+  transition: fill 250ms ease-in-out;
 }
 .homepage-list li:hover .homepage-icons {
   fill: #fff;
@@ -115,9 +134,4 @@
   border: 1px solid rgb(255, 255, 255);
   background-color: #000000ad;
   border-radius: 0px;
-}
-
-/*! complete trouble */
-.active {
-  color: red;
 }
