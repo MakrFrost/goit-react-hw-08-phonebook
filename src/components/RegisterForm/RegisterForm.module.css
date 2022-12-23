@@ -1,7 +1,6 @@
 .reg_form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
   width: 420px;
 }
 .reg_form input {
@@ -9,6 +8,8 @@
   min-height: 30px;
   border-radius: 20px;
   padding: 5px 10px;
+  margin-top: 10px;
+  font-size: 18px;
 }
 .reg_form label {
   display: flex;
@@ -19,10 +20,26 @@
   margin-bottom: 20px;
 }
 .reg_name {
+  position: relative;
+}
+.reg_icon_name {
+  position: absolute;
+  right: 10px;
+  top: 72%;
+  transform: translateY(-50%);
 }
 .reg_mail {
+  position: relative;
 }
-.eg_pass {
+.reg_pass {
+  position: relative;
+}
+.reg_icon_pass {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 74%;
+  transform: translateY(-50%);
 }
 .reg_button {
 }
