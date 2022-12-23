@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { AiFillEye, AiFillEyeInvisible, AiOutlineUser } from 'react-icons/ai';
+import { MdOutlineEmail } from 'react-icons/md';
+
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import css from './RegisterForm.module.css';
-import { AiFillEye, AiFillEyeInvisible, AiOutlineUser } from 'react-icons/ai';
 
-export const RegisterForm = () => {
+export default function RegisterForm() {
   const dispatch = useDispatch();
   const [typeInput, setTypeInput] = useState('password');
   const [noPassId, setNoPassId] = useState('pass');
@@ -25,7 +27,6 @@ export const RegisterForm = () => {
   function FormSubmit(e) {
     e.preventDefault();
     const form = e.currentTarget;
-    console.log(form);
 
     dispatch(
       register({
@@ -54,25 +55,28 @@ export const RegisterForm = () => {
       <label className={css.reg_mail}>
         Email
         <input type="email" name="email" required />
+        <MdOutlineEmail className={css.reg_icon_mail} />
       </label>
       <label className={css.reg_pass}>
         Password
         <input type={typeInput} name="password" required />
         {closedEyeIcon ? (
           <AiFillEyeInvisible
-            className={css.reg_icon_pass}
+            className={css.reg_icon_nopass}
             onClick={LookPassword}
             id={noPassId}
           />
         ) : (
           <AiFillEye
-            className={css.reg_icon}
+            className={css.reg_icon_pass}
             onClick={LookPassword}
             id={noPassId}
           />
         )}
       </label>
-      <button type="submit">Registered</button>
+      <button type="submit" className={css.reg_button}>
+        Registered
+      </button>
     </form>
   );
-};
+}

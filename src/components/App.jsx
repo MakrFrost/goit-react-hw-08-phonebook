@@ -5,13 +5,13 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 // пути
-import { PublicRoute } from './PublicRoute';
-import { PrivateRoute } from './PrivatRoute';
+import { PublicRoute } from './Routes/PublicRoute';
+import { PrivateRoute } from './Routes/PrivatRoute';
 // редакс
 import { useAuth } from 'redux/auth/useAuth';
 import { refreshUser } from 'redux/auth/operations';
 // линки
-import { Layout } from './Layout';
+import Model from './Model/Model';
 import NoPage from './NoPage/NoPage';
 import Loader from './Loader/Loader';
 
@@ -33,7 +33,7 @@ export const App = () => {
   ) : (
     <div className="main-container">
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Model />}>
           <Route index element={<HomePage />} />
           <Route
             path="/register"

@@ -1,10 +1,27 @@
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { logIn } from 'redux/auth/operations';
 
-export const LoginForm = () => {
+export default function LoginForm() {
   const dispatch = useDispatch();
+  const [typeInput, setTypeInput] = useState('password');
+  const [noPassId, setNoPassId] = useState('pass');
+  const [closedEyeIcon, setClosedEyeIcon] = useState(true);
 
-  const handleSubmit = e => {
+  function LookPassword(e) {
+    if (e.currentTarget.id === 'pass') {
+      setTypeInput('text');
+      setNoPassId('noPass');
+      setClosedEyeIcon(false);
+    } else {
+      setTypeInput('password');
+      setNoPassId('pass');
+      setClosedEyeIcon(true);
+    }
+  }
+
+  function handleSubmit(e) {
     e.preventDefault();
     const form = e.currentTarget;
     dispatch(
@@ -14,7 +31,7 @@ export const LoginForm = () => {
       })
     );
     form.reset();
-  };
+  }
 
   return (
     <form onSubmit={handleSubmit} autoComplete="on">
@@ -24,9 +41,14 @@ export const LoginForm = () => {
       </label>
       <label>
         Password
-        <input type="password" name="password" />
+        <input type={typeInput} name="password" id={noPassId} />
+        {closedEyeIcon ? (
+          <AiFillEyeInvisible id={noPassId} onClick={LookPassword} />
+        ) : (
+          <AiFillEye id={noPassId} onClick={LookPassword} />
+        )}
       </label>
       <button type="submit">Log In</button>
     </form>
   );
-};
+}

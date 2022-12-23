@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 
-import { AppBar } from './AppBar/AppBar';
-import Loader from './Loader/Loader';
+import { AppBar } from '../AppBar/AppBar';
+import Loader from '../Loader/Loader';
 
-export const Layout = () => {
+export default function Model() {
   return (
     <div className="homepage-container">
       <AppBar />
@@ -13,4 +13,4 @@ export const Layout = () => {
       </Suspense>
     </div>
   );
-};
+}
