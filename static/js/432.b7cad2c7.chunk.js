@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[432],{8432:function(e,t,n){n.r(t),n.d(t,{default:function(){return r}});var i=n(1160),o=n(184);function r(){return(0,o.jsxs)("div",{children:[(0,o.jsx)("title",{children:"Registration"}),(0,o.jsx)(i.B,{})]})}}}]);
+//# sourceMappingURL=432.b7cad2c7.chunk.js.map
