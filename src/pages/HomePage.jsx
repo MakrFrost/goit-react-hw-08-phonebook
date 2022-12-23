@@ -37,14 +37,14 @@ export default function HomePage() {
         </li>
       </ul>
       <p className="homepage-text">
-        Let's not waste time and go straight to
+        Dont waste time and go straight to
         <Link to="/register" className="homepage-link">
           register
         </Link>
         your account!
       </p>
       <p className="homepage-text">
-        Or if you have an account, then let's
+        If you already have an account, let's
         <Link to="/login" className="homepage-link">
           log in
         </Link>

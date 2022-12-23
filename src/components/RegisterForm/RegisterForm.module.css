@@ -1,0 +1,28 @@
+.reg_form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 420px;
+}
+.reg_form input {
+  width: 95%;
+  min-height: 30px;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+.reg_form label {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.reg_form label:not(:last-child) {
+  margin-bottom: 20px;
+}
+.reg_name {
+}
+.reg_mail {
+}
+.eg_pass {
+}
+.reg_button {
+}
