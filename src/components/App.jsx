@@ -61,14 +61,15 @@ export const App = () => {
       </Routes>
       <ToastContainer
         position="top-right"
-        autoClose={3000}
+        autoClose={4000}
+        limit={3}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
         rtl={false}
         pauseOnFocusLoss
         draggable
-        pauseOnHover={false}
+        pauseOnHover
         theme="dark"
       />
     </div>

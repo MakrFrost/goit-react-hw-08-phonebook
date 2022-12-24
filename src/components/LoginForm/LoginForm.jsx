@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { MdOutlineEmail } from 'react-icons/md';
+
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { logIn } from 'redux/auth/operations';
 import css from './LoginForm.module.css';
@@ -39,6 +41,7 @@ export default function LoginForm() {
       <label className={css.log_mail}>
         Email
         <input type="email" name="email" />
+        <MdOutlineEmail className={css.log_icon_mail} />
       </label>
       <label className={css.log_pass}>
         Password

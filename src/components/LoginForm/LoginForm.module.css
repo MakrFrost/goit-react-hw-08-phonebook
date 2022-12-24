@@ -50,6 +50,13 @@
 }
 .log_mail {
   margin-bottom: 20px;
+  position: relative;
+}
+.log_icon_mail {
+  position: absolute;
+  right: -12px;
+  top: 72%;
+  transform: translateY(-50%);
 }
 .log_pass {
   position: relative;
