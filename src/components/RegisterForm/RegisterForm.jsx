@@ -74,8 +74,8 @@ export default function RegisterForm() {
           />
         )}
       </label>
-      <button type="submit" className={css.reg_button}>
-        Registered
+      <button type="submit" className={css.reg_btn}>
+        Create
       </button>
     </form>
   );

@@ -16,7 +16,6 @@ export default function ContactsPage() {
 
   return (
     <>
-      <title>Your contacts</title>
       <ContactForm />
       <Filter />
       <div>{Loading && <Loader />}</div>

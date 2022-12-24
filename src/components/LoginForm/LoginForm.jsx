@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { logIn } from 'redux/auth/operations';
+import css from './LoginForm.module.css';
 
 export default function LoginForm() {
   const dispatch = useDispatch();
@@ -34,21 +35,31 @@ export default function LoginForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="on">
-      <label>
+    <form onSubmit={handleSubmit} autoComplete="on" className={css.log_form}>
+      <label className={css.log_mail}>
         Email
         <input type="email" name="email" />
       </label>
-      <label>
+      <label className={css.log_pass}>
         Password
         <input type={typeInput} name="password" id={noPassId} />
         {closedEyeIcon ? (
-          <AiFillEyeInvisible id={noPassId} onClick={LookPassword} />
+          <AiFillEyeInvisible
+            id={noPassId}
+            onClick={LookPassword}
+            className={css.reg_icon_nopass}
+          />
         ) : (
-          <AiFillEye id={noPassId} onClick={LookPassword} />
+          <AiFillEye
+            id={noPassId}
+            onClick={LookPassword}
+            className={css.reg_icon_pass}
+          />
         )}
       </label>
-      <button type="submit">Log In</button>
+      <button type="submit" className={css.log_btn}>
+        Log In
+      </button>
     </form>
   );
 }

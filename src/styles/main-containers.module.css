@@ -43,6 +43,7 @@
   padding: 8px;
   border-radius: 10px;
   transition: all 350ms ease-out;
+  color: #000000;
 }
 .appbar-container a:hover {
   color: #00000070;

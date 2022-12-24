@@ -1,10 +1,32 @@
-.reg_form {
+/* .reg_button {
+  width: 200px;
+  height: 46px;
+  font-size: large;
+  cursor: pointer;
+  margin-top: 40px;
+  box-shadow: rgba(27, 27, 27, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border: 2px solid transparent;
+  transition: all 250ms ease-in-out;
+}
+.reg_button:hover {
+  background-color: #242424d8;
+  border: 2px solid rgba(0, 0, 0, 0.555);
+  box-shadow: none;
+  color: white;
+}
+.reg_button:disabled {
+  border: 1px solid rgba(39, 39, 39, 0.3);
+  background-color: rgba(36, 36, 36, 0.255);
+} */
+
+.log_form {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
   align-items: center;
+  max-width: 100%;
 }
-.reg_form input {
+.log_form input {
   width: 100%;
   height: 30px;
   border-radius: 20px;
@@ -18,36 +40,18 @@
   background-color: #ffffffda;
   transition: all 500ms ease;
 }
-.reg_form input:focus {
+.log_form input:focus {
   background-color: rgb(255, 255, 255);
 }
-.reg_form label {
+.log_form label {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.reg_form label:not(:nth-child(3)) {
+.log_mail {
   margin-bottom: 20px;
 }
-.reg_name {
-  position: relative;
-}
-.reg_icon_name {
-  position: absolute;
-  right: -12px;
-  top: 72%;
-  transform: translateY(-50%);
-}
-.reg_mail {
-  position: relative;
-}
-.reg_icon_mail {
-  position: absolute;
-  right: -12px;
-  top: 74%;
-  transform: translateY(-50%);
-}
-.reg_pass {
+.log_pass {
   position: relative;
 }
 .reg_icon_pass {
@@ -65,11 +69,10 @@
   transform: translateY(-50%);
   fill: #00000050;
 }
-.reg_btn {
+.log_btn {
   width: 200px;
   height: 46px;
   font-size: large;
-  /* border-radius: 20px; */
   cursor: pointer;
   margin-top: 40px;
   box-shadow: rgba(27, 27, 27, 0.25) 0px 30px 60px -12px inset,
@@ -77,13 +80,13 @@
   border: 2px solid transparent;
   transition: all 250ms ease-in-out;
 }
-.reg_btn:hover {
+.log_btn:hover {
   background-color: #242424d8;
   border: 2px solid rgba(0, 0, 0, 0.555);
   box-shadow: none;
   color: white;
 }
-.reg_btn:disabled {
+.log_btn:disabled {
   border: 1px solid rgba(39, 39, 39, 0.3);
   background-color: rgba(36, 36, 36, 0.255);
 }
