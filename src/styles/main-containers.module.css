@@ -136,3 +136,28 @@
   background-color: #000000ad;
   border-radius: 0px;
 }
+
+/* No page class */
+.no-page {
+  font-size: 26px;
+  text-align: center;
+  margin-top: 200px;
+}
+.no-page a {
+  font-size: 26px;
+  margin: 0 4px;
+  padding: 0 6px;
+  padding-bottom: 5px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  background-color: #e9e9e990;
+
+  transition: all 250ms ease-in-out;
+}
+.no-page a:hover {
+  color: #fff;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #000000ad;
+  border-radius: 0px;
+}

@@ -15,11 +15,11 @@ export default function ContactsPage() {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="123">
       <ContactForm />
       <Filter />
       <div>{Loading && <Loader />}</div>
       <ContactList />
-    </>
+    </div>
   );
 }

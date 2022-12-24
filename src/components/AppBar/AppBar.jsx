@@ -1,6 +1,6 @@
-import { Navigation } from '../Navigation/Navigation';
-import { UserMenu } from '../index';
-import { AuthNav } from '../AuthNav/AuthNav';
+import Navigation from '../Navigation/Navigation';
+import UserMenu from '../UserLogout/UserLogout';
+import AuthNav from '../AuthNav/AuthNav';
 import { useAuth } from '../../redux/auth/useAuth';
 // import css from './AppBar.styled.css';
 

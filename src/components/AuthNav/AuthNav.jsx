@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { MdOutlineAppRegistration, MdLogin } from 'react-icons/md';
 
-export const AuthNav = () => {
+export default function AuthNav() {
   return (
     <>
       <NavLink className="register" to="/register">
@@ -14,4 +14,4 @@ export const AuthNav = () => {
       </NavLink>
     </>
   );
-};
+}

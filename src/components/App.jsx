@@ -14,6 +14,7 @@ import { refreshUser } from 'redux/auth/operations';
 import Model from './Model/Model';
 import NoPage from './NoPage/NoPage';
 import Loader from './Loader/Loader';
+import TimePage from './TimePage/TimePage';
 
 const LoginPage = lazy(() => import('../pages/LoginPage'));
 const ContactsPage = lazy(() => import('../pages/ContactsPage'));
@@ -54,6 +55,12 @@ export const App = () => {
             path="/contacts"
             element={
               <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
+            }
+          />
+          <Route
+            path="/time"
+            element={
+              <PrivateRoute redirectTo="/login" component={<TimePage />} />
             }
           />
         </Route>
