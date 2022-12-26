@@ -1,56 +1,71 @@
 import { useSelector, useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
+
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from '../../redux/contacts/operations';
+import css from './ContactForm.module.css';
 
-export const ContactForm = () => {
+export default function ContactForm() {
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const name = form.elements.name.value;
-    const number = form.elements.number.value;
+  const onFormSubmit = async evt => {
+    evt.preventDefault();
 
-    const newContact = {
-      name,
-      number,
-    };
+    const number = evt.currentTarget.elements.number.value;
+    const name = evt.currentTarget.elements.name.value;
 
-    const currentName = name;
-    const matchName = contacts.some(
-      contact => contact.name.toLowerCase() === currentName.toLowerCase()
+    const copy = contacts.find(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
     );
-
-    if (!matchName) {
-      dispatch(addContact({ ...newContact }));
+    if (copy) {
+      toast.info(`A "${copy.name}" already in  contacts!`);
+      return;
     }
-    form.reset();
+    if (!name && number) {
+      toast.info('Please, enter a Name');
+      return;
+    }
+    if (name && !number) {
+      toast.info('Please, enter a Number');
+      return;
+    }
+    if (name === '' && number === '') {
+      toast.info('Please, enter Name and Number!');
+    }
+    if (name && number) {
+      dispatch(addContact({ name: name, number: number }));
+      toast.success(`You have successfully added "${name}" to you contacts!`);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <form onSubmit={onFormSubmit} className={css.form}>
+      <label className={css.label__name}>
         Name
         <input
+          className={css.input__name}
+          placeholder="JUGGERNAUT"
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required
         />
       </label>
-      <label>
+      <label className={css.label__number}>
         Number
         <input
+          className={css.input__number}
+          placeholder="+7209282291"
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          required
         />
       </label>
-      <button type="submit">Add contact</button>
+      <button type="submit" className={css.form_button}>
+        Add contact!
+      </button>
     </form>
   );
-};
+}

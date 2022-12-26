@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
-import { ContactItem } from '../ContactItem/ContactItem';
+import ContactItem from '../ContactItem/ContactItem';
 import { selectVisibleContacts } from 'redux/contacts/selectors';
 
-export const ContactList = () => {
+export default function ContactList() {
   const contacts = useSelector(selectVisibleContacts);
   const totalContacts = contacts.length;
 
@@ -14,4 +14,4 @@ export const ContactList = () => {
       <p>Total contacts in you phonebook: {totalContacts}</p>
     </ul>
   );
-};
+}

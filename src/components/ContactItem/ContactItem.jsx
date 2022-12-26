@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { deleteContact } from 'redux/contacts/operations';
 import { useDispatch } from 'react-redux';
 
-export const ContactItem = ({ name, number, id }) => {
+export default function ContactItem({ name, number, id }) {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
@@ -17,7 +17,7 @@ export const ContactItem = ({ name, number, id }) => {
       </button>
     </li>
   );
-};
+}
 
 ContactItem.propTypes = {
   number: PropTypes.string.isRequired,

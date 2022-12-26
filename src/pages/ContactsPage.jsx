@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { isLoading } from 'redux/contacts/selectors';
 import { fetchContacts } from 'redux/contacts/operations';
-import { Filter, ContactForm, ContactList } from 'components/index';
+import ContactForm from '../components/ContactForm/ContactForm';
+import Filter from '../components/Filter/Filter';
+import ContactList from '../components/ContactList/ContactList';
 import Loader from 'components/Loader/Loader';
 
 export default function ContactsPage() {
@@ -15,7 +17,7 @@ export default function ContactsPage() {
   }, [dispatch]);
 
   return (
-    <div className="123">
+    <div>
       <ContactForm />
       <Filter />
       <div>{Loading && <Loader />}</div>

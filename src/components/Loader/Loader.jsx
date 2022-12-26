@@ -1,13 +1,13 @@
 import { RotatingLines } from 'react-loader-spinner';
 
-function Loader() {
+function Loader({ width }) {
   return (
     <div className="loader-container">
       <RotatingLines
         strokeColor="black"
         strokeWidth="5"
         animationDuration="0.75"
-        width="96px"
+        width={width}
         visible={true}
       />
     </div>
@@ -15,3 +15,6 @@ function Loader() {
 }
 
 export default Loader;
+
+// import Loader from '../Loader/Loader';
+// const Loading = useSelector(isLoading);
