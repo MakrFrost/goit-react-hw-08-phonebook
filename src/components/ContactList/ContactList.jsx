@@ -25,6 +25,3 @@ export default function ContactList() {
     </div>
   );
 }
-// import { isLoading } from 'redux/contacts/selectors';
-// import Loader from 'components/Loader/Loader';
-// const Loading = useSelector(isLoading);

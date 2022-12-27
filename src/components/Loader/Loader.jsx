@@ -15,6 +15,3 @@ function Loader({ width }) {
 }
 
 export default Loader;
-
-// import Loader from '../Loader/Loader';
-// const Loading = useSelector(isLoading);
