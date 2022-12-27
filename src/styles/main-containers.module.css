@@ -11,7 +11,8 @@
 /* Main containers */
 .main-container {
   min-height: 600px;
-  padding: 20px 30px;
+  padding: 20px 20px;
+  padding-bottom: 10px;
   background-color: rgba(177, 177, 177, 0.589);
   border: 1px solid black;
   border-radius: 20px;
@@ -74,7 +75,7 @@
 .loader-container {
   display: flex;
   justify-content: center;
-  margin-top: 140px;
+  margin-top: 100px;
 }
 .homepage-text {
   text-align: center;

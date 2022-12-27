@@ -8,7 +8,6 @@ export const selectError = state => state.contacts.error;
 
 export const selectFilter = state => state.filter.filter;
 
-//!
 export const sortContacts = arr => {
   return [...arr.sort((a, b) => a.name.localeCompare(b.name))];
 };

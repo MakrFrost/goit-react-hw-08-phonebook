@@ -3,6 +3,8 @@ import { toast } from 'react-toastify';
 
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from '../../redux/contacts/operations';
+import { BsFillPersonFill, BsTelephonePlusFill } from 'react-icons/bs';
+
 import css from './ContactForm.module.css';
 
 export default function ContactForm() {
@@ -37,6 +39,7 @@ export default function ContactForm() {
       dispatch(addContact({ name: name, number: number }));
       toast.success(`You have successfully added "${name}" to you contacts!`);
     }
+    evt.currentTarget.reset();
   };
 
   return (
@@ -51,6 +54,7 @@ export default function ContactForm() {
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         />
+        <BsFillPersonFill className={css.name__icon} />
       </label>
       <label className={css.label__number}>
         Number
@@ -62,6 +66,7 @@ export default function ContactForm() {
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
         />
+        <BsTelephonePlusFill className={css.name__icon} />
       </label>
       <button type="submit" className={css.form_button}>
         Add contact!

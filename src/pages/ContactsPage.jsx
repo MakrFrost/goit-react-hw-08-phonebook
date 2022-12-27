@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+// import { useDispatch } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { isLoading } from 'redux/contacts/selectors';
@@ -17,11 +18,11 @@ export default function ContactsPage() {
   }, [dispatch]);
 
   return (
-    <div>
+    <>
       <ContactForm />
       <Filter />
-      <div>{Loading && <Loader />}</div>
       <ContactList />
-    </div>
+      {/* {Loading ? <Loader /> : <ContactList />} */}
+    </>
   );
 }
