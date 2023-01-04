@@ -14,3 +14,6 @@
   display: flex;
   font-size: 28px;
 }
+.time_list li:not(:last-child) {
+  margin-bottom: 20px;
+}
