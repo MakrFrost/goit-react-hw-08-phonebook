@@ -5,7 +5,6 @@
 @import url('./styles/navigation.module.css');
 
 body {
-  /* cursor: default; */
   background-image: url('./img/bcg.png');
   background-color: rgba(75, 75, 75, 0.164);
   padding: 40px;
