@@ -1,0 +1,75 @@
+.item {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 9px;
+  width: 96%;
+  padding: 12px;
+  border-radius: 50px;
+}
+.item i {
+  margin-left: auto;
+}
+.item:hover {
+  background-color: rgba(75, 75, 75, 0.05);
+}
+.item::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.item button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid;
+  cursor: pointer;
+  background-color: #9797971a;
+  margin-right: 30px;
+}
+.item button svg {
+  width: 20px;
+  height: 20px;
+}
+.item button:hover {
+  background-color: #ff72726b;
+  border: 1px solid rgba(0, 0, 0, 0.555);
+}
+.item button:active {
+  background-color: #fc4848af;
+}
+.item button:disabled {
+  border: 1px solid rgba(219, 0, 0, 0.3);
+  background-color: rgba(255, 0, 0, 0.255);
+}
+
+.item a {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #9797971a;
+  border: 1px solid rgba(0, 0, 0, 0.555);
+}
+.item a svg {
+  fill: inherit;
+}
+.item a:hover {
+  background-color: #1cf00038;
+  border: 1px solid rgba(0, 0, 0, 0.555);
+}
+.item a:active {
+  background-color: #1cf00091;
+}

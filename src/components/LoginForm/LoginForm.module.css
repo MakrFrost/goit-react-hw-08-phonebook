@@ -1,0 +1,99 @@
+/* .reg_button {
+  width: 200px;
+  height: 46px;
+  font-size: large;
+  cursor: pointer;
+  margin-top: 40px;
+  box-shadow: rgba(27, 27, 27, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border: 2px solid transparent;
+  transition: all 250ms ease-in-out;
+}
+.reg_button:hover {
+  background-color: #242424d8;
+  border: 2px solid rgba(0, 0, 0, 0.555);
+  box-shadow: none;
+  color: white;
+}
+.reg_button:disabled {
+  border: 1px solid rgba(39, 39, 39, 0.3);
+  background-color: rgba(36, 36, 36, 0.255);
+} */
+
+.log_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+.log_form input {
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  padding: 5px 0;
+  padding-left: 10px;
+  padding-right: 40px;
+  margin-top: 10px;
+  font-size: 18px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  background-color: #ffffffda;
+  transition: all 500ms ease;
+}
+.log_form input:focus {
+  background-color: rgb(255, 255, 255);
+}
+.log_form label {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.log_mail {
+  margin-bottom: 20px;
+  position: relative;
+}
+.log_icon_mail {
+  position: absolute;
+  right: -12px;
+  top: 72%;
+  transform: translateY(-50%);
+}
+.log_pass {
+  position: relative;
+}
+.reg_icon_pass {
+  cursor: pointer;
+  position: absolute;
+  right: -12px;
+  top: 74%;
+  transform: translateY(-50%);
+}
+.reg_icon_nopass {
+  cursor: pointer;
+  position: absolute;
+  right: -12px;
+  top: 74%;
+  transform: translateY(-50%);
+  fill: #00000050;
+}
+.log_btn {
+  width: 200px;
+  height: 46px;
+  font-size: large;
+  cursor: pointer;
+  margin-top: 40px;
+  box-shadow: rgba(27, 27, 27, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border: 2px solid transparent;
+  transition: all 250ms ease-in-out;
+}
+.log_btn:hover {
+  background-color: #242424d8;
+  border: 2px solid rgba(0, 0, 0, 0.555);
+  box-shadow: none;
+  color: white;
+}
+.log_btn:disabled {
+  border: 1px solid rgba(39, 39, 39, 0.3);
+  background-color: rgba(36, 36, 36, 0.255);
+}

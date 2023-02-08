@@ -1,0 +1,19 @@
+.time_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.time_container b {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.time_container p {
+  font-size: 28px;
+}
+.time_list {
+  display: flex;
+  font-size: 28px;
+}
+.time_list li:not(:last-child) {
+  margin-bottom: 20px;
+}

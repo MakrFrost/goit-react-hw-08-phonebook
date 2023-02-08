@@ -1,0 +1,10 @@
+.navigations-icons {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+.navigation-contacts {
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+}
